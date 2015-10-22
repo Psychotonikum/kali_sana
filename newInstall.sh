@@ -15,16 +15,17 @@ apt-get dist-upgrade -y
 
 # install stuff
 apt-get install -y \
-	linux-headers-$(uname -r)
+	linux-headers-$(uname -r) \
 	emacs \
-	lashplugin-nonfree \
+	flashplugin-nonfree \
 	conky \
 	gdebi \
 	alsa-utils \
 	tor \
 	filezilla filezilla-common \
 	htop nethogs \
-	virtualbox virtualbox-dkms
+	virtualbox virtualbox-dkms \
+	steam
 
 #install skype
 wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb
