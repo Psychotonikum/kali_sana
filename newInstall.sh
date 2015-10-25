@@ -2,6 +2,7 @@
 cp .bashrc ~/
 cp .bash_aliases ~/
 cp .emacs ~/ 
+cp .tmux.conf ~/
 
 # add architecture
 dpkg --add-architecture i386
@@ -25,7 +26,7 @@ apt-get install -y \
 	filezilla filezilla-common \
 	htop nethogs \
 	virtualbox virtualbox-dkms \
-	steam
+	steam xboxdrv evtest \
 
 #install skype
 wget -O skype-install.deb http://www.skype.com/go/getskype-linux-deb
@@ -37,3 +38,6 @@ rm skype-install.deb
 apt-get autoclean
 apt-get autoremove
 apt-get purge
+
+# initialize PS3 controller
+xboxdrv --silent --detach-kernel-driver
